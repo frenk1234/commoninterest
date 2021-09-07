@@ -8,3 +8,60 @@
   --secondary-font: ;
   --main-text-color: #000;
 }
+
+/* Feed html */
+.feedBody {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.feedNav li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 2rem;
+  text-transform: uppercase;
+}
+.logo img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.logo {
+  float: right;
+}
+.feedNav {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+.feedMain {
+  display: flex;
+  justify-content: center;
+}
+.feedMain p,
+h3 {
+  color: white;
+}
+.post {
+  flex-direction: column;
+}
+.feedImg {
+  height: 40vw;
+  width: 40vw;
+}
+.eachPost {
+  border: 1px solid white;
+  margin: 2em;
+  padding: 0.2em;
+}
+.LCS {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.LCS img {
+  margin-left: 1em;
+  padding: 0.2em;
+  width: 1.5vw;
+  height: 1.5vw;
+}
