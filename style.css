@@ -67,9 +67,154 @@ button {
   --main-text-color: #000;
 }
 
+/* SLIDER */
+.slider {
+  max-width: 100%;
+  position: relative;
+  /* margin-top: 10px; */
+  height: 600px;
+}
+
+.slider .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+.slider .prev,
+.slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.slideText {
+  position: absolute;
+  color: #fff;
+  font-size: 35px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+.slider-dots {
+  text-align: center;
+}
+.slider-dots_item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin-top: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .feedNav {
+    font-size: 5px;
+  }
+  .logo img {
+    display: none;
+  }
+  p {
+    font-size: 0.3em;
+  }
+  h3 {
+    font-size: 0.6em;
+  }
+  .slider {
+    max-width: 425px;
+    max-height: 200px;
+  }
+  .slider .item img {
+    max-height: 200px;
+    max-width: 425px;
+  }
+  .slider .prev,
+  .slider .next {
+    font-size: 10px;
+  }
+  .slideText {
+    font-size: 15px;
+  }
+  .slider-dots_item {
+    height: 4px;
+    width: 4px;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .feedNav {
+    font-size: 10px;
+  }
+  .slider {
+    max-width: 768px;
+    max-height: 300px;
+  }
+  .slider .item img {
+    max-height: 300px;
+    max-width: 768px;
+  }
+  .slider .prev,
+  .slider .next {
+    font-size: 15px;
+  }
+  .slideText {
+    font-size: 25px;
+  }
+  .slider-dots_item {
+    height: 8px;
+    width: 8px;
+  }
+}
+
 /* Feed html */
 .feedBody {
-  background-color: black;
+  background: black linear-gradient(90deg, rgb(82, 77, 77) 1%, transparent 3%)
+    1px;
+  background-size: 100px auto;
   padding: 0;
   margin: 0;
 }
@@ -79,6 +224,7 @@ button {
   list-style: none;
   padding-right: 2rem;
   text-transform: uppercase;
+  margin-top: 1em;
 }
 .logo img {
   width: 1.5vw;
@@ -88,18 +234,18 @@ button {
   float: right;
 }
 .feedNav {
-  position: fixed;
-  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  height: 3em;
   width: 100%;
 }
 .feedMain {
   display: flex;
   justify-content: center;
 }
-.feedMain p,
-h3 {
-  color: white;
-}
+
 .post {
   flex-direction: column;
 }
@@ -108,18 +254,19 @@ h3 {
   width: 40vw;
 }
 .eachPost {
-  border: 1px solid white;
+  background-color: white;
+  /* border: 1px solid white; */
   margin: 2em;
   padding: 0.2em;
 }
 .LCS {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  /* background-color: white; */
 }
 .LCS img {
   margin-left: 1em;
-  padding: 0.2em;
   width: 1.5vw;
   height: 1.5vw;
+  padding-right: 1em;
 }
