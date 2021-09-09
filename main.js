@@ -1,26 +1,25 @@
-
 const url = "https://keasecondsemester-6711.restdb.io/rest/albumcover";
 
 // the API KEY
 const options = {
-    headers: {
-        "x-apikey": "6136704b43cedb6d1f97ed6d",
-    },
+  headers: {
+    "x-apikey": "6136704b43cedb6d1f97ed6d",
+  },
 };
 
 fetch(url, options)
-    .then((response) => {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        return response.json();
-    })
+  .then((response) => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
+  })
 
-    .then((data) => {
-        //we have the data
-        // console.log(data);
-        handleData(data);
-    })
+  .then((data) => {
+    //we have the data
+    // console.log(data);
+    handleData(data);
+  });
 //.catch((e) => {
 //woops, something went wrong
 //console.error("An error occured:", e.message);
@@ -28,42 +27,39 @@ fetch(url, options)
 //});
 
 function handleData(allArtists) {
+  allArtists.forEach((artist) => {
+    //console.log(artist);
 
-    allArtists.forEach((artist) => {
-        //console.log(artist);
+    //1.make a template
 
-        //1.make a template
+    ////2.grab it
+    const template = document.querySelector("#template");
+    //3.clone it
+    const clone = template.cloneNode(true).content;
+    //4. populate with data
+    clone.querySelector(".feed .albumcover").src += artist.img_url;
 
-        ////2.grab it
-        const template = document.querySelector("#template");
-        //3.clone it 
-        const clone = template.cloneNode(true).content;
-        //4. populate with data 
-        clone.querySelector(".feed .albumcover").src += artist.img_url;
+    console.log(artist.artist);
+    console.log(artist);
+    clone.querySelector(".feed .albumname").textContent = artist.albumname;
 
-        console.log(artist.artist);
-        console.log(artist);
-        clone.querySelector(".feed .albumname").textContent = artist.albumname;
+    //5.append it
 
-        //5.append it
+    const container = document.querySelector(".post");
+    container.appendChild(clone);
+  });
 
-        const container = document.querySelector(".post");
-        container.appendChild(clone);
-    });
-
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-    if(!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
+  const menuBtn = document.querySelector(".menu-btn");
+  let menuOpen = false;
+  menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+      menuBtn.classList.add("open");
+      menuOpen = true;
     } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
+      menuBtn.classList.remove("open");
+      menuOpen = false;
     }
-    menuOpen.classList.toggle('menubtn.open');
-}); 
-
-function (menuOpen)
-
-
+    menuOpen.classList.toggle("menubtn.open");
+  });
+}
+// function (menuOpen)
