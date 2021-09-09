@@ -137,6 +137,8 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+  font-family: gopher, sans-serif;
+  text-transform: uppercase;
 }
 .slider-dots {
   text-align: center;
@@ -178,17 +180,120 @@ button {
   }
 }
 
+/* Feed html */
+.feedBody {
+  /* background: black linear-gradient(90deg, rgb(82, 77, 77) 1%, transparent 3%)
+    1px;
+  background-size: 100px auto; */
+  background-image: url(img/pexels-merlin-lightpainting-7464062.png);
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.feedNav li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: gopher, sans-serif;
+}
+.li {
+  margin-top: 1rem;
+}
+
+.feedNav ul {
+  margin-top: 0;
+}
+
+.logo img {
+  width: 3vw;
+  height: 3vw;
+}
+.logo {
+  float: right;
+}
+.feedNav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgb(16, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 0, 36, 0.8309524493391106) 31%,
+    rgba(83, 9, 121, 0.7777311608237045) 55%,
+    rgba(199, 0, 255, 0.4471989479385504) 100%
+  );
+  height: 3em;
+  width: 100%;
+}
+.feedMain {
+  display: flex;
+  justify-content: center;
+}
+
+.post {
+  flex-direction: column;
+}
+.feed {
+  background-color: white;
+  margin: 2em;
+  padding: 0.2em;
+}
+.albumcover {
+  height: 40vw;
+  width: 40vw;
+}
+.albumname {
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
+.artist,
+.genre {
+  font-family: "Livvic", sans-serif;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.LCSS {
+  margin: 0;
+  padding: 0;
+}
+
+.LCSS img {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-left: 1vw;
+}
+
+#support {
+  width: 2.5vw;
+  height: 2.5vw;
+}
 @media only screen and (max-width: 425px) {
   .feedNav {
-    font-size: 5px;
+    font-size: 3px;
   }
   .logo img {
     display: none;
   }
-  p {
+  .albumname {
+    font-size: 10px;
+  }
+  .genre {
     font-size: 0.3em;
   }
-  h3 {
+  .artist {
     font-size: 0.6em;
   }
   .slider {
@@ -234,89 +339,13 @@ button {
     height: 8px;
     width: 8px;
   }
-}
-
-/* Feed html */
-.feedBody {
-  background: black linear-gradient(90deg, rgb(82, 77, 77) 1%, transparent 3%)
-    1px;
-  background-size: 100px auto;
-  padding: 0;
-  margin: 0;
-}
-
-.feedNav li {
-  display: inline-block;
-  list-style: none;
-  padding-right: 2rem;
-  text-transform: uppercase;
-  margin-top: 1em;
-  color: white;
-}
-
-.feedNav ul {
-  margin-top: 0;
-}
-
-.logo img {
-  width: 2vw;
-  height: 2vw;
-}
-.logo {
-  float: right;
-  padding: 0;
-  margin: 0;
-}
-.feedNav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgb(16, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(16, 0, 36, 0.8309524493391106) 31%,
-    rgba(83, 9, 121, 0.7777311608237045) 55%,
-    rgba(199, 0, 255, 0.4471989479385504) 100%
-  );
-  height: 3em;
-  width: 100%;
-}
-.feedMain {
-  display: flex;
-  justify-content: center;
-}
-
-.post {
-  flex-direction: column;
-}
-.feed {
-  background-color: white;
-  margin: 2em;
-  padding: 0.2em;
-}
-.albumcover {
-  height: 40vw;
-  width: 40vw;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-.LCSS {
-  margin: 0;
-  padding: 0;
-}
-
-.LCSS img {
-  width: 1.5vw;
-  height: 1.5vw;
-  margin-left: 1vw;
-}
-
-#support {
-  width: 2.5vw;
-  height: 2.5vw;
+  .albumname {
+    font-size: 1.5em;
+  }
+  .artist {
+    font-size: 1em;
+  }
+  .genre {
+    font-size: smaller;
+  }
 }
