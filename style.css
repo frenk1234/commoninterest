@@ -70,7 +70,7 @@ button {
 
 /* Feed html */
 .feedBody {
-  background-color: black;
+  /* background-color: black; */
   padding: 0;
   margin: 0;
 }
@@ -97,23 +97,23 @@ button {
   display: flex;
   justify-content: center;
 }
-.feedMain p,
+/* .feedMain p,
 h3 {
   color: white;
-}
-.post {
+} */
+.template {
   flex-direction: column;
 }
-.feedImg {
+.albumcover {
   height: 40vw;
   width: 40vw;
 }
-.eachPost {
+.feed {
   border: 1px solid white;
   margin: 2em;
   padding: 0.2em;
 }
-.LCS {
+/* .LCS {
   display: flex;
   flex-direction: row;
   background-color: white;
@@ -123,4 +123,4 @@ h3 {
   padding: 0.2em;
   width: 1.5vw;
   height: 1.5vw;
-}
+} */
