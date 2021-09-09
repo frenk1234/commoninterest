@@ -255,7 +255,10 @@ button {
 .post {
   flex-direction: column;
 }
-.feedImg {
+.feed {
+  background-color: white;
+}
+.albumcover {
   height: 40vw;
   width: 40vw;
 }
@@ -265,14 +268,14 @@ button {
   margin: 2em;
   padding: 0.2em;
 }
-.LCS {
+.LCSS {
   display: flex;
   flex-direction: row;
   /* background-color: white; */
 }
-.LCS img {
+
+.LCSS img {
   margin-left: 1em;
   width: 1.5vw;
   height: 1.5vw;
-  padding-right: 1em;
 }
