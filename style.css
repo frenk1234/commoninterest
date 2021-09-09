@@ -226,6 +226,7 @@ button {
   padding-right: 2rem;
   text-transform: uppercase;
   margin-top: 1em;
+  color: white;
 }
 
 .feedNav ul {
@@ -243,7 +244,13 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: white;
+  background: rgb(16, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 0, 36, 0.8309524493391106) 31%,
+    rgba(83, 9, 121, 0.7777311608237045) 55%,
+    rgba(199, 0, 255, 0.4471989479385504) 100%
+  );
   height: 3em;
   width: 100%;
 }
@@ -257,25 +264,32 @@ button {
 }
 .feed {
   background-color: white;
+  margin: 2em;
+  padding: 0.2em;
 }
 .albumcover {
   height: 40vw;
   width: 40vw;
 }
-.eachPost {
-  background-color: white;
-  /* border: 1px solid white; */
-  margin: 2em;
-  padding: 0.2em;
-}
-.LCSS {
+
+.buttons {
   display: flex;
   flex-direction: row;
-  /* background-color: white; */
+  margin: 0;
+  padding: 0;
+}
+.LCSS {
+  margin: 0;
+  padding: 0;
 }
 
 .LCSS img {
-  margin-left: 1em;
   width: 1.5vw;
   height: 1.5vw;
+  margin-left: 1vw;
+}
+
+#support {
+  width: 2.5vw;
+  height: 2.5vw;
 }
