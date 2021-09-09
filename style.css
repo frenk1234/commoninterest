@@ -2,8 +2,10 @@
 
 .sign-up-page {
   margin: 0;
-  padding: 0;
-  background-image: url(/img/spencer-imbrock-JAHdPHMoaEA-unsplash.jpg);
+
+  padding: 1;
+  background-image: url(/img/synth.jpg);
+
   background-position: center;
   width: 100%;
   color: white;
