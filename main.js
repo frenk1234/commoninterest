@@ -1,3 +1,4 @@
+
 const url = "https://keasecondsemester-6711.restdb.io/rest/albumcover";
 
 // the API KEY
@@ -49,4 +50,20 @@ function handleData(allArtists) {
         const container = document.querySelector(".post");
         container.appendChild(clone);
     });
-}
+
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+    menuOpen.classList.toggle('menubtn.open');
+}); 
+
+function (menuOpen)
+
+
