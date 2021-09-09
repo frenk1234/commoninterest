@@ -213,9 +213,13 @@ button {
 
 /* Feed html */
 .feedBody {
+<<<<<<< HEAD
   background: black linear-gradient(90deg, rgb(82, 77, 77) 1%, transparent 3%)
     1px;
   background-size: 100px auto;
+=======
+  /* background-color: black; */
+>>>>>>> 0290ee794b85b6a916aa71e2b73fdc0f939574c6
   padding: 0;
   margin: 0;
 }
@@ -246,14 +250,23 @@ button {
   display: flex;
   justify-content: center;
 }
+<<<<<<< HEAD
 
 .post {
+=======
+/* .feedMain p,
+h3 {
+  color: white;
+} */
+.template {
+>>>>>>> 0290ee794b85b6a916aa71e2b73fdc0f939574c6
   flex-direction: column;
 }
-.feedImg {
+.albumcover {
   height: 40vw;
   width: 40vw;
 }
+<<<<<<< HEAD
 .eachPost {
   background-color: white;
   /* border: 1px solid white; */
@@ -261,6 +274,14 @@ button {
   padding: 0.2em;
 }
 .LCSS {
+=======
+.feed {
+  border: 1px solid white;
+  margin: 2em;
+  padding: 0.2em;
+}
+/* .LCS {
+>>>>>>> 0290ee794b85b6a916aa71e2b73fdc0f939574c6
   display: flex;
   flex-direction: row;
   /* background-color: white; */
@@ -270,5 +291,9 @@ button {
   margin-left: 1em;
   width: 1.5vw;
   height: 1.5vw;
+<<<<<<< HEAD
   padding-right: 1em;
 }
+=======
+} */
+>>>>>>> 0290ee794b85b6a916aa71e2b73fdc0f939574c6
