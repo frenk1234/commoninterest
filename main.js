@@ -42,6 +42,8 @@ function handleData(allArtists) {
     console.log(artist.artist);
     console.log(artist);
     clone.querySelector(".feed .albumname").textContent = artist.albumname;
+    clone.querySelector(".feed .artist").textContent = artist.artist;
+    clone.querySelector(".feed .genre").textContent = artist.genre;
 
     //5.append it
 
