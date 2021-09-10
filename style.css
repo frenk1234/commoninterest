@@ -21,7 +21,7 @@ p {
 .sign-up-page {
   margin: 0;
   padding: 1;
-  background-image: url(/img/synth.jpg);
+  background-image: url(img/synth.jpg);
   background-position: center;
   width: 100%;
   color: white;
