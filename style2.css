@@ -30,6 +30,16 @@ main {
   margin: 5rem;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: purple;
+}
+
 aside {
   float: right;
   /* background: rgb(16, 0, 36);
